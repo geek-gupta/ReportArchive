@@ -8,29 +8,27 @@ import android.os.Bundle;
 
 import com.company.reportarchive.reportarchive.MainActivity;
 import com.company.reportarchive.reportarchive.R;
+import com.company.reportarchive.reportarchive.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
-    final String splashScreenString = "Splash Screen shown";
+    String filename = "MY_PREF";
+    String KEY = "showsplash";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-        boolean splashScreenShow = sharedPreferences.getBoolean(splashScreenString,false);
-
-        if(!splashScreenShow){
-            Intent intent = new Intent(this, MainActivity.class);
-             startActivity(intent);
-
-             SharedPreferences.Editor  editor = sharedPreferences.edit();
-             editor.putBoolean(splashScreenString,true);
-             editor.commit();
-             finish();
+        sharedPreferences = getSharedPreferences(filename, MODE_PRIVATE);
+        boolean showSplashScreen = sharedPreferences.getBoolean(KEY, true);
+        if (showSplashScreen) {
+            sharedPreferences.edit().putBoolean(KEY, false).commit();
+        } else {
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }
 
 
