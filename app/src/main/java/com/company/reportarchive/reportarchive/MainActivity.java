@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mResultModelArrayList = new ArrayList<>();
+
         mResultModelArrayList.add(new ResultModel("HIV-1B","XYZ","12-12-2010"));
         mResultModelArrayList.add(new ResultModel("HeamoGlobin Test","Abc","12-2-2015"));
         mResultModelArrayList.add(new ResultModel("E.S.R","JHG","1-09-2011"));
