@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.company.reportarchive.reportarchive.activities.MainActivity;
@@ -24,6 +25,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
     FirebaseDatabase db;
 
+    public static String USER_NAME;
+
     EditText userNameText, phoneNumberText, emailText, passwordText;
     Button register;
     public FirebaseAuth firebaseAuth;
@@ -38,17 +41,18 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         firebaseAuth = FirebaseAuth.getInstance();
         getSupportActionBar().hide();
 
-        userNameText = findViewById(R.id.userNameText);
-        phoneNumberText =findViewById(R.id.phoneText);
-        emailText = findViewById(R.id.emailText);
-        passwordText = findViewById(R.id.passwordText);
-        register = findViewById(R.id.registerButton);
+        userNameText = (EditText) findViewById(R.id.userNameText);
+        phoneNumberText =(EditText)findViewById(R.id.phoneText);
+        emailText = (EditText)findViewById(R.id.emailText);
+        passwordText =(EditText) findViewById(R.id.passwordText);
+        register = (Button) findViewById(R.id.registerButton);
         register.setOnClickListener(this);
     }
     boolean validateInput() {
 
         boolean result = true;
         String username = userNameText.getText().toString();
+
         String password = passwordText.getText().toString();
         String phone = phoneNumberText.getText().toString();
         String email = emailText.getText().toString();
@@ -76,6 +80,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             emailText.setError("Please enter email");
             result = false;
         }
+
         return true;
     }
 
@@ -101,6 +106,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                                     , userNameText.getText().toString()
                                     , emailText.getText().toString(),
                                     phoneNumberText.getText().toString());
+                            USER_NAME = userNameText.getText().toString();
                             Intent intent = new Intent(SignupActivity.this,MainActivity.class);
                             startActivity(intent);
                             //Utilites.startHome(SignUpActivity.this);

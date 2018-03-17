@@ -53,9 +53,9 @@ public class QueryDataAdapter extends RecyclerView.Adapter<QueryDataAdapter.View
 
         public ViewHolder(View itemView) {
             super(itemView);
-            mTestNameTextView = itemView.findViewById(R.id.testNameTextView);
-            mDoctorNameTextView = itemView.findViewById(R.id.doctorNameTextView);
-            mTimeTextView = itemView.findViewById(R.id.timeTextView);
+            mTestNameTextView = (TextView)itemView.findViewById(R.id.testNameTextView);
+            mDoctorNameTextView = (TextView)itemView.findViewById(R.id.doctorNameTextView);
+            mTimeTextView = (TextView)itemView.findViewById(R.id.timeTextView);
         }
     }
 

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.company.reportarchive.reportarchive.send_data.AddTestData">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter patient  aadhar id : "
+        android:background="@drawable/edittextstyle"
+        android:padding="4dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/patient_aadhar_id"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hospital id : "
+        android:background="@drawable/edittextstyle"
+        android:padding="4dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/hospital_id"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Doctor id : "
+        android:background="@drawable/edittextstyle"
+        android:padding="4dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/doctor_id"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginBottom="10dp"
+        android:padding="4dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:gravity="center"
+            android:hint="dd"
+            android:id="@+id/dd_text"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:gravity="center"
+            android:hint="mm"
+            android:id="@+id/mm_text"
+            android:background="@drawable/edittextstyle"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:gravity="center"
+            android:hint="yyyy"
+            android:id="@+id/yyyy_text"
+            android:background="@drawable/edittextstyle"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:padding="4dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="4dp"
+            android:hint="Disease 1:"
+            android:id="@+id/disease_one"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:padding="4dp"
+            android:hint="  description here"
+            android:id="@+id/disease_one_desc"
+            android:background="@drawable/edittextstyle"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:padding="4dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="4dp"
+            android:hint="Disease 2:"
+            android:id="@+id/disease_two"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:padding="4dp"
+            android:hint="  description here"
+            android:id="@+id/disease_two_desc"
+            android:background="@drawable/edittextstyle"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:padding="4dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="4dp"
+            android:hint="Disease 3:"
+            android:id="@+id/disease_three"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:padding="4dp"
+            android:hint="  description here"
+            android:id="@+id/disease_three_desc"
+            android:background="@drawable/edittextstyle"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:padding="4dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="4dp"
+            android:hint="Disease 4:"
+            android:id="@+id/disease_four"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:padding="4dp"
+            android:id="@+id/disease_four_desc"
+            android:hint="  description here"
+            android:background="@drawable/edittextstyle"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit_btn"
+        android:background="@drawable/edittextstyle"/>
+
+</LinearLayout>
