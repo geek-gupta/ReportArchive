@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.company.reportarchive.reportarchive.MainActivity;
+import com.company.reportarchive.reportarchive.activities.MainActivity;
 import com.company.reportarchive.reportarchive.R;
 import com.company.reportarchive.reportarchive.utils.Utilities;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -100,7 +100,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                             Utilities.sendIdTokenToServer(FirebaseDatabase.getInstance(),token
                                     , userNameText.getText().toString()
                                     , emailText.getText().toString(),
-                                    phoneNumberText.getText().toString(),"test"+System.currentTimeMillis());
+                                    phoneNumberText.getText().toString());
                             Intent intent = new Intent(SignupActivity.this,MainActivity.class);
                             startActivity(intent);
                             //Utilites.startHome(SignUpActivity.this);

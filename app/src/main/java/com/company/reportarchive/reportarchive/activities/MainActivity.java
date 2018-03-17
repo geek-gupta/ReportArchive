@@ -1,4 +1,4 @@
-package com.company.reportarchive.reportarchive;
+package com.company.reportarchive.reportarchive.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.EditText;
 
+import com.company.reportarchive.reportarchive.R;
 import com.company.reportarchive.reportarchive.adapters.QueryDataAdapter;
 import com.company.reportarchive.reportarchive.models.ResultModel;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        init();
 
         mResultModelArrayList = new ArrayList<>();
 
@@ -36,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
         mQueryDataAdapter = new QueryDataAdapter(this,mResultModelArrayList);
 
-        mRecyclerView.setAdapter(mQueryDataAdapter);
+
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mRecyclerView.setHasFixedSize(true);
+
+        mRecyclerView.setAdapter(mQueryDataAdapter);
 
     }
 

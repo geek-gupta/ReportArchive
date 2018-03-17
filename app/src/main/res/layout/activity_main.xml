@@ -8,7 +8,7 @@
     android:elevation="10dp"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.company.reportarchive.reportarchive.MainActivity">
+    tools:context="com.company.reportarchive.reportarchive.activities.MainActivity">
 
     <EditText
         android:layout_width="match_parent"

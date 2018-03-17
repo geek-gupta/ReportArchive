@@ -3,7 +3,7 @@ package com.company.reportarchive.reportarchive.utils;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.company.reportarchive.reportarchive.MainActivity;
+import com.company.reportarchive.reportarchive.activities.MainActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,13 +19,12 @@ public class Utilities {
 //        context.finish();
 //    }
 
-    public static void sendIdTokenToServer(FirebaseDatabase db,String token,String name,String email,String phone,String groupName){
+    public static void sendIdTokenToServer(FirebaseDatabase db,String token,String name,String email,String phone){
         DatabaseReference myref= db.getReference().child("users").child(encodeEmail(email.trim().toLowerCase()));
         myref.child("Uname").setValue(name);
         myref.child("UToken").setValue(token);
         myref.child("Uphone").setValue(phone);
 
-        db.getReference("groups").child(groupName).setValue(groupName);
 
 
     }

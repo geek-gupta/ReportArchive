@@ -1,12 +1,9 @@
 package com.company.reportarchive.reportarchive.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.company.reportarchive.reportarchive.MainActivity;
 import com.company.reportarchive.reportarchive.R;
 import com.company.reportarchive.reportarchive.login.LoginActivity;
 
@@ -33,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
 
-        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
